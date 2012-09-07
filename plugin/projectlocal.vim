@@ -17,11 +17,11 @@ function! s:WalkTreeInternal(dir) " {
 		endif
 	endfo
 
-	if empty(a:dir) || l:is_project_dir
+	let l:parent_dir = fnamemodify(a:dir, ":p:h:h")
+	if l:is_project_dir || a:dir == l:parent_dir
 		" Finished walking.
 	else
 		" Look at the parent dir.
-		let l:parent_dir = fnamemodify(a:dir, ":p:h:h")
 		call s:WalkTreeInternal( l:parent_dir )
 	endif
 
