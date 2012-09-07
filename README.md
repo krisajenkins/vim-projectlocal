@@ -12,19 +12,21 @@ New. Please report any issues you find!
 
 * Install [Pathogen][pathogen]. (You're already using Pathogen, right?)
 * Clone this project into `~/.vim/bundle/vim-projectlocal`.
-* Add a `.vimrc` to your project.
+* Add a `.vimrc` to the root of your project.
 
 ## Customization
 
 ProjectLocal will also look for `.vimrc` files in your subdirectories. For example:
 
 ```
-resources/js/.vimrc => Affects any file under resources/js/
-resources/.vimrc    => Affects any file under resources/
 .vimrc              => Affects all files in the project.
+resources/.vimrc    => Affects any file under resources/
+resources/js/.vimrc => Affects any file under resources/js/
 ```
 
-By default, directories called `.git`, `.hg` or `.svn` mark the root of a project. You can override this with this in `~/.vimrc`:
+Files are processed in top-down order.
+
+By default, directories called `.git`, `.hg` or `.svn` mark the root of a project. You can customize this by changing the setting in your main `~/.vimrc`:
 
 ```vim
 " The root is marked by any directory or file with one of these names:
