@@ -4,7 +4,7 @@ endif
 let g:loaded_projectlocal = 1
 
 if !exists("g:projectlocal_project_markers")
-	let g:projectlocal_project_markers = ['.git', '.hg', '.svn']
+	let g:projectlocal_project_markers = ['.git', '.hg']
 endif
 
 function! s:WalkTreeInternal(dir) " {

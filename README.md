@@ -2,7 +2,7 @@
 
 ProjectLocal lets you set up project-specific `.vimrc` files.
 
-When you edit a file, it searches up through your directories, looking for a `.vimrc` file. It tries to guess the project's root by looking for a `.git/.hg/.svn` folder on the way up.
+When you edit a file, it searches up through your directories, looking for a `.vimrc` file. It tries to guess the project's root by looking for a `.git/.hg` folder on the way up.
 
 ## Status
 
@@ -26,11 +26,11 @@ resources/js/.vimrc => Affects any file under resources/js/
 
 Files are processed in top-down order.
 
-By default, directories called `.git`, `.hg` or `.svn` mark the root of a project. You can customize this by changing the setting in your main `~/.vimrc`:
+By default, directories called `.git` or `.hg` mark the root of a project. You can customize this by changing the setting in your main `~/.vimrc`:
 
 ```vim
-" The root is marked by any directory or file with one of these names:
-let g:projectlocal_project_markers = ['.git', '.hg', '.svn', '.project', 'README.md']
+" The root is considered to be the first directory containing an item with one of these names:
+let g:projectlocal_project_markers = ['.git', '.hg', '.project', 'README.md']
 ```
 
 ## Credits
