@@ -1,4 +1,4 @@
 augroup projectlocal "{
 	autocmd!
-	autocmd BufNewFile,BufReadPost * call projectlocal#WalkTree()
+	autocmd BufNewFile,BufReadPost * nested call projectlocal#WalkTree()
 augroup END " }
