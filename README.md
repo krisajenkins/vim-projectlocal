@@ -6,7 +6,7 @@ When you edit a file, it searches up through your directories, looking for a `.v
 
 ## Status
 
-New. Please report any issues you find!
+Stable. Feature-complete, so there's no new development, but any bugs will be fixed if found.
 
 ## Installation
 
